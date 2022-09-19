@@ -1,0 +1,24 @@
+name: check format
+
+on:
+  push:
+    paths:
+      - app/**
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.15.0'
+      - name: yarn install, check lint and format, snapshot test 
+        working-directory: ./app
+        run: |
+          yarn set version 3.2.3
+          yarn install
+          yarn format:check
