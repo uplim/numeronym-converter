@@ -9,12 +9,21 @@ module.exports = {
   },
   resolve: {
     extensions: [".ts", ".tsx", ".js", ".json"],
+    alias: {
+      '@': path.resolve(__dirname, './src/'),
+    },
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: [{ loader: "ts-loader" }],
+        use: [{
+          loader: "ts-loader",
+          exclude: /node_modules/,
+          options: {
+            configFile: path.resolve(__dirname, 'tsconfig.json')
+          },
+        }],
       },
     ],
   },
