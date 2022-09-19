@@ -1,0 +1,11 @@
+version: '3.9'
+services:
+  node:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: numeronym-converter
+    volumes:
+      - ./app:/home/app
+    ports:
+      - 3000:3000
