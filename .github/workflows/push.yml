@@ -1,4 +1,4 @@
-name: check format
+name: ci
 
 on:
   push:
@@ -16,7 +16,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '16.15.0'
-      - name: yarn install, check lint and format, snapshot test 
+      - name: ci 
         working-directory: ./app
         run: |
           yarn set version 3.2.3
