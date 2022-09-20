@@ -1,12 +1,16 @@
 import React from 'react'
 import { Global } from '@emotion/react'
 import { globalStyle } from '@/styles/global-style'
+import { TextBox } from './components/TextBox'
 
 const App = () => {
   return (
     <>
       <Global styles={globalStyle} />
-      <div>あああ</div>
+      <div>
+        <TextBox canInput={true} />
+        <TextBox canInput={false} />
+      </div>
     </>
   )
 }
