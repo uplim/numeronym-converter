@@ -5,7 +5,10 @@
     "build": "webpack --config webpack.prod.js",
     "dev": "webpack-dev-server --open --config webpack.dev.js",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
-    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\""
+    "format:check": "prettier --check \"src/**/*.{js,jsx,ts,tsx}\"",
+    "test": "jest",
+    "storybook": "start-storybook -s ./public -p 6006",
+    "build:storybook": "build-storybook"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^6.5.12",

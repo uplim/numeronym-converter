@@ -2,6 +2,7 @@ import React from 'react'
 import { Global } from '@emotion/react'
 import { globalStyle } from '@/styles/globalStyle'
 import { TextBox } from './components/TextBox'
+import { Button } from './components/Buttons/Button'
 
 const App = () => {
   return (
