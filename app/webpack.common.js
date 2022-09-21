@@ -13,6 +13,10 @@ module.exports = {
       '@': path.resolve(__dirname, './src/'),
     },
   },
+  watchOptions: {
+    poll: 800,
+    aggregateTimeout: 300
+  },
   module: {
     rules: [
       {
