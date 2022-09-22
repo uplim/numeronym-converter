@@ -9,3 +9,4 @@ services:
       - ./app:/home/app
     ports:
       - 3000:3000
+      - 6006:6006

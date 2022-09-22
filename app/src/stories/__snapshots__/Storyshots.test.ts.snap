@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots stories/components/Buttons/Button Default 1`] = `
+<button
+  className="css-k1yl56"
+  onClick={[Function]}
+>
+  こんばーと
+</button>
+`;
