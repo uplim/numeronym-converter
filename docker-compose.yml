@@ -7,6 +7,12 @@ services:
     container_name: numeronym-converter
     volumes:
       - ./app:/home/app
+      - node_modules_volume:/home/app/node_modules:delegated
+      - build_volume:/home/app/build:nocopy
     ports:
       - 3000:3000
       - 6006:6006
+
+volumes:
+  node_modules_volume:
+  build_volume:
