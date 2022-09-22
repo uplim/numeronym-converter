@@ -27,6 +27,8 @@
     docker compose exec node sh
   # install packages
     docker compose exec node yarn install
+    # vscodeでエラーが出る場合は追加で下記コマンドを打ってください
+      docker cp numeronym-converter:/home/app/node_modules/ ./app/
   # formatting
     docker compose exec node yarn format
 ```
