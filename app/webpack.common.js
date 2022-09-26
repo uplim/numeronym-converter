@@ -21,10 +21,10 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
+        exclude: /stories/,
         use: [
           {
             loader: 'ts-loader',
-            exclude: [/stories/],
             options: {
               configFile: path.resolve(__dirname, 'tsconfig.json')
             }
