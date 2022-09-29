@@ -1,17 +1,17 @@
-const path = require("path");
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-  entry: "./src/index.tsx",
+  entry: './src/index.tsx',
   output: {
-    filename: "bundle.js",
-    path: path.resolve(__dirname, "build"),
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'build')
   },
   resolve: {
-    extensions: [".ts", ".tsx", ".js", ".json"],
+    extensions: ['.ts', '.tsx', '.js', '.json'],
     alias: {
-      '@': path.resolve(__dirname, './src/'),
-    },
+      '@': path.resolve(__dirname, './src/')
+    }
   },
   watchOptions: {
     poll: 800,
@@ -21,19 +21,22 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: [{
-          loader: "ts-loader",
-          options: {
-            configFile: path.resolve(__dirname, 'tsconfig.json')
-          },
-        }],
-      },
-    ],
+        exclude: /stories/,
+        use: [
+          {
+            loader: 'ts-loader',
+            options: {
+              configFile: path.resolve(__dirname, 'tsconfig.json')
+            }
+          }
+        ]
+      }
+    ]
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'ぬめろにむ こんばーた！',
-      filename: 'index.html',
+      filename: 'index.html'
     })
   ]
-};
+}
