@@ -8,6 +8,7 @@ const App = () => {
     <>
       <Global styles={globalStyle} />
       <div>
+        <h1>ぬめろにむこんばーた</h1>
         <TextBox canInput={true} />
         <TextBox canInput={false} />
       </div>
