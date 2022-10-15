@@ -1,22 +1,20 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Home } from '@/pages/index'
+import { About } from '@/pages/about'
 import { Global } from '@emotion/react'
 import { globalStyle } from '@/styles/globalStyle'
-import { TextBox } from './components/TextBox'
-import { useIO } from './hooks/useIO'
-import { Button } from './components/Buttons'
-import { convertSentence } from './utils/convertSentence'
-const App = () => {
-  const { input, output, onChange } = useIO()
 
+const App = () => {
   return (
     <>
       <Global styles={globalStyle} />
-      <div>
-        <h1>ぬめろにむこんばーた</h1>
-        <TextBox canInput={true} onChange={onChange} />
-        <Button label={'へんかん'} onClick={() => convertSentence()} />
-        <TextBox canInput={false} />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path={`/`} element={<Home />} />
+          <Route path={`/about/`} element={<About />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
