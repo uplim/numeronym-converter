@@ -3,7 +3,7 @@ import styled from '@emotion/styled'
 import { colors } from '@/styles/colors'
 import { IconContext } from 'react-icons'
 import { HiOutlineSwitchHorizontal } from 'react-icons/hi'
-import { ConverterCard } from '../Cards'
+import { ConverterCard } from '@/components/Cards'
 
 export const SwitchButton = () => {
   return (
@@ -27,10 +27,6 @@ const SwitchButtonStyle = styled.button`
   background-color: ${colors.white};
   border-radius: 8px;
   border: solid 2px ${colors.black};
-  -webkit-transition: width 2s ease, height 2s ease;
-  -moz-transition: width 2s ease, height 2s ease;
-  -o-transition: width 2s ease, height 2s ease;
-  -ms-transition: width 2s ease, height 2s ease;
   transition: width 0.2s ease, height 0.2s ease;
   &:active {
     width: 6rem;
