@@ -8,3 +8,38 @@ exports[`Storyshots stories/components/Buttons/Button Default 1`] = `
   こんばーと
 </button>
 `;
+
+exports[`Storyshots stories/components/Buttons/SwitchButton Default 1`] = `
+[
+  <div
+    className="css-1w4coe8"
+  >
+    a
+  </div>,
+  <button
+    className="css-ag9l4f"
+  >
+    <svg
+      fill="none"
+      height="2rem"
+      stroke="currentColor"
+      strokeWidth="0"
+      style={
+        {
+          "color": undefined,
+        }
+      }
+      viewBox="0 0 24 24"
+      width="2rem"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+      />
+    </svg>
+  </button>,
+]
+`;
