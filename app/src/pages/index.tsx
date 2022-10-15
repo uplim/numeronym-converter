@@ -12,7 +12,7 @@ export const Home = () => {
       <Link to={`/about/`}>/about</Link>
       <div>
         <h1>ぬめろにむこんばーた</h1>
-        <TextBox canInput={true} onChange={(e) => onChange(e)}/>
+        <TextBox canInput={true} onChange={(e) => onChange(e)} />
         <Button label={'へんかん'} onClick={convertSentence} />
         <TextBox canInput={false} />
       </div>
