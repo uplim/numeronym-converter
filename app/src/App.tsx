@@ -1,19 +1,20 @@
 import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Home } from '@/pages/index'
+import { About } from '@/pages/about'
 import { Global } from '@emotion/react'
 import { globalStyle } from '@/styles/globalStyle'
-import { TextBox } from './components/TextBox'
-import { SwitchButton } from './components/Buttons'
 
 const App = () => {
   return (
     <>
       <Global styles={globalStyle} />
-      <div>
-        <h1>ぬめろにむこんばーた</h1>
-        <SwitchButton />
-        <TextBox canInput={true} />
-        <TextBox canInput={false} />
-      </div>
+      <BrowserRouter>
+        <Routes>
+          <Route path={`/`} element={<Home />} />
+          <Route path={`/about/`} element={<About />} />
+        </Routes>
+      </BrowserRouter>
     </>
   )
 }
