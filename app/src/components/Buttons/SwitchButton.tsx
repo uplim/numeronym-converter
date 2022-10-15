@@ -5,7 +5,6 @@ import { IconContext } from 'react-icons'
 import { HiOutlineSwitchHorizontal } from 'react-icons/hi'
 import { ConverterCard } from '../Cards'
 
-
 export const SwitchButton = () => {
   return (
     <>
