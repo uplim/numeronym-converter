@@ -3,10 +3,13 @@ import styled from '@emotion/styled'
 
 type TextBoxProps = {
   canInput: boolean
+  onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void
 }
 
-export const TextBox = ({ canInput }: TextBoxProps) => {
-  return <TextArea readOnly={!canInput} />
+export const TextBox = ({ canInput, onChange }: TextBoxProps) => {
+  return (
+    <TextArea readOnly={!canInput} onChange={(e) => onChange && onChange(e)} />
+  )
 }
 
 const TextArea = styled.textarea`
