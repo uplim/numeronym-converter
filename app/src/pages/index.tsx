@@ -6,7 +6,7 @@ import { Button } from '@/components/Buttons'
 import { convertSentence } from '@/utils/convertSentence'
 
 export const Home = () => {
-  const {output,setOutput, onChange} = useIO()
+  const { output, setOutput, onChange } = useIO()
   return (
     <>
       <Link to={`/about/`}>/about</Link>
@@ -14,7 +14,10 @@ export const Home = () => {
         <h1>ぬめろにむこんばーた</h1>
         <TextBox canInput={true} onChange={(e) => onChange(e)} />
         <TextBox canInput={false} value={output} />
-        <Button label={'へんかん'} onClick={() => setOutput(convertSentence())} />
+        <Button
+          label={'へんかん'}
+          onClick={() => setOutput(convertSentence())}
+        />
       </div>
     </>
   )
