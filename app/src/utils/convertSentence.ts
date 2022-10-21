@@ -1,7 +1,6 @@
 import { splitSentence } from '@/utils/splitSentence'
 
 export const convertSentence = (input: string) => {
-
   const arr = splitSentence(input)
 
   return getConvertedWords(arr).join(' ')

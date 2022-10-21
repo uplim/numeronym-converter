@@ -6,7 +6,7 @@ import { Button } from '@/components/Buttons'
 import { convertSentence } from '@/utils/convertSentence'
 
 export const Home = () => {
-  const { input ,output, setOutput, onChange } = useIO()
+  const { input, output, setOutput, onChange } = useIO()
   return (
     <>
       <Link to={`/about/`}>/about</Link>
