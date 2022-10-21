@@ -1,12 +1,8 @@
 import { splitSentence } from '@/utils/splitSentence'
-import { useIO } from '@/hooks/useIO'
 
-export function convertSentence() {
-  /* TODO: splitSentenceを使う
-  const{input} = useIO()
-  const arr = splitSentence(input) */
+export const convertSentence = (input: string) => {
 
-  const arr = ['Are', 'you', 'a', 'baseball', 'fun?']
+  const arr = splitSentence(input)
 
   return getConvertedWords(arr).join(' ')
 }
