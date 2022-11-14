@@ -24,9 +24,13 @@ module.exports = {
         exclude: /stories/,
         use: [
           {
-            loader: 'ts-loader',
+            loader: 'babel-loader',
             options: {
-              configFile: path.resolve(__dirname, 'tsconfig.json')
+              presets: [
+                '@babel/preset-env',
+                '@babel/preset-react',
+                '@babel/preset-typescript',
+              ],
             }
           }
         ]
