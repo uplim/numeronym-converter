@@ -17,7 +17,7 @@
     [
       "module-resolver",
       {
-        alias: {
+        "alias": {
           "@/": ["./src/"]
         }
       }
